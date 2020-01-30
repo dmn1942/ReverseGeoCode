@@ -1,0 +1,172 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:label="app_name">
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:layout_weight="1">
+   <TextView
+       android:text="House Number:"
+       android:textStyle="bold"
+       android:textSize="10pt"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_weight="1"/>
+   <EditText
+      android:id="@+id/houseNo"
+      android:layout_height="wrap_content"
+      android:layout_width="150dp"
+      android:inputType="text" 
+      android:paddingLeft="20dp"
+      android:gravity="center"/>
+</LinearLayout>
+<LinearLayout
+     android:orientation="horizontal"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:paddingLeft="10dp"
+     android:layout_weight="1">    
+ <TextView
+     android:text="Street:"
+     android:textStyle="bold"
+     android:textSize="10pt"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_weight="1"/>
+ <EditText
+     android:id="@+id/street"
+     android:layout_height="wrap_content"
+     android:layout_width="150dp"
+     android:inputType="text"
+     android:paddingLeft="20dp"
+     android:gravity="center"/>
+</LinearLayout>
+<LinearLayout
+     android:orientation="horizontal"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:paddingLeft="10dp"
+     android:layout_weight="1">
+ <TextView
+        android:text="City:"
+        android:textStyle="bold"
+        android:textSize="10pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <EditText
+        android:id="@+id/city"
+        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:gravity="center"/>
+ </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:layout_weight="1">
+   <TextView
+        android:text="State:"
+        android:textStyle="bold"
+        android:textSize="10pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <EditText
+        android:id="@+id/state"
+        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:gravity="center"/>
+ </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:layout_weight="1">
+    <TextView
+        android:text="Postal Code:"
+        android:textStyle="bold"
+        android:textSize="10pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <EditText
+        android:id="@+id/zipCode"
+        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:inputType="textPostalAddress"
+        android:paddingLeft="20dp"
+         android:gravity="center"/>
+    </LinearLayout>   
+    <Button
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="Get Location"
+        android:layout_width="206.5dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:id="@+id/button"
+        android:clickable="true"
+        android:onClick="Button_Click"/>
+    <Button
+        android:backgroundTint="@android:color/holo_green_light"
+        android:layout_width="206.5dp"
+        android:text="Quit"
+        android:layout_alignRight="@+id/button1"
+        android:layout_height="50dp"
+        android:onClick="Button1_Click"
+        android:id="@+id/button1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:layout_weight="1">
+    <TextView
+        android:text="Enter Latitude:"
+        android:textStyle="bold"
+        android:textSize="10pt"
+        android:inputType="text"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_weight="1"/> 
+     <EditText
+        android:id="@+id/lat"
+        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:inputType="numberSigned|numberDecimal"
+        android:paddingLeft="20dp"
+        android:gravity="center"/>
+    </LinearLayout>
+       <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:layout_weight="1">
+    <TextView
+        android:text="Enter Longitude:"
+        android:textStyle="bold"
+        android:textSize="10pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+     <EditText
+        android:id="@+id/lon"
+        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:inputType="numberSigned|numberDecimal"
+        android:paddingLeft="20dp"
+        android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>
