@@ -7,7 +7,8 @@ using Android.Widget;
 using System.Collections.Generic;
 using System;
 using Context = Android.Content.Context;
-using Android.Runtime;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ReverseGeoCode
 {
@@ -43,6 +44,7 @@ namespace ReverseGeoCode
                     theLongitude = Convert.ToDouble(lon.Text);
                     var geo = new Geocoder(this);
                     IList<Address> addresses = geo.GetFromLocation(theLatitude, theLongitude, 1);
+                    await MyAsyncMethod();
                     if (addresses.Any())
                     {
                         UpdateAddressFields(addresses.First());
@@ -58,6 +60,7 @@ namespace ReverseGeoCode
                     IList<Address> addresses;
                     var geo = new Geocoder(con);
                     addresses = geo.GetFromLocationName(addr, 1);
+                    await MyAsyncMethod();
                     if (!addresses.Any())
                     {
                         Toast.MakeText(this.ApplicationContext, "Did not find LatLong", ToastLength.Short).Show();
@@ -82,6 +85,13 @@ namespace ReverseGeoCode
                 ave.Text = addr.Thoroughfare;
                 city.Text = addr.Locality;
             }
+        }
+        /**************************************************************************************/
+        private static Task MyAsyncMethod()
+        {
+            Thread.Sleep(2000);
+            return Task.CompletedTask;
+             
         }
     }
 }
