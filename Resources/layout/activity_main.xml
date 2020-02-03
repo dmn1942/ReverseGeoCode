@@ -126,6 +126,14 @@ android:label="app_name">
         android:layout_height="50dp"
         android:onClick="Button1_Click"
         android:id="@+id/button1" />
+     <Button
+        android:backgroundTint="@android:color/holo_green_light"
+        android:layout_width="206.5dp"
+        android:text="Delete Address"
+        android:layout_alignRight="@+id/button2"
+        android:layout_height="50dp"
+        android:onClick="Button2_Click"
+        android:id="@+id/button2" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"

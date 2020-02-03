@@ -24,6 +24,7 @@ namespace ReverseGeoCode
             SetContentView(Resource.Layout.activity_main);
             var but = FindViewById<Android.Widget.Button>(Resource.Id.button);
             var but1 = FindViewById<Android.Widget.Button>(Resource.Id.button1);
+            var but2 = FindViewById<Android.Widget.Button>(Resource.Id.button2);
             EditText house = FindViewById<Android.Widget.EditText>(Resource.Id.houseNo);
             EditText ave = FindViewById<Android.Widget.EditText>(Resource.Id.street);
             EditText city = FindViewById<Android.Widget.EditText>(Resource.Id.city);
@@ -70,6 +71,15 @@ namespace ReverseGeoCode
                     double b = addresses.First().Longitude;
                     lon.Text = b.ToString();
                 }
+            };
+            /**************************************************************************************/
+            but2.Click += (sender, e) =>
+            {
+                house.Text = "";
+                ave.Text = "";
+                city.Text = "";
+                state.Text = "";
+                zip.Text = "";
             };
             /**************************************************************************************/
             but1.Click += (sender, e) =>
